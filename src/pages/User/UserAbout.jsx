@@ -129,7 +129,7 @@ const UserAbout = () => {
                     </Grid>
                   </Grid>
                 </Grid>
-                <Grid sx={{mt:3}}>
+                {/* <Grid sx={{mt:3}}>
                   <Button sx={{mr:1, ml:28}} variant="contained" href="#">
                     update
                   </Button>
@@ -139,7 +139,7 @@ const UserAbout = () => {
                   <Button variant="contained" href={`/`}>
                     Cancel
                   </Button>
-                </Grid>
+                </Grid> */}
               </Paper>
             </Grid>
           </Container>

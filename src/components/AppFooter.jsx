@@ -24,7 +24,7 @@ export default function StickyFooter() {
       sx={{
         display: 'flex',
         flexDirection: 'column',
-        minHeight: '80vh',
+        minHeight: '70vh',
       }}
     >
       <CssBaseline />
@@ -32,7 +32,7 @@ export default function StickyFooter() {
         component="footer"
         sx={{
           py: 3,
-          px: 1,
+          px: 2,
           mt: 'auto',
           backgroundColor: (theme) =>
             theme.palette.mode === 'light'
@@ -42,7 +42,7 @@ export default function StickyFooter() {
         }}
       >
         <Container sx={{ml:55}} maxWidth="sm">
-          <Typography variant="body1">
+          <Typography variant="body1" sx={{color:'black'}}>
             J V Cabiao Electronics Shop
           </Typography>
           <Copyright />

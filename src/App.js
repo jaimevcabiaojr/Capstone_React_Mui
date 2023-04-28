@@ -12,11 +12,19 @@ import { Grid } from "@mui/material";
 import NavbarMUI from "./components/AppBarDark";
 import UserAbout from "./pages/User/UserAbout";
 import AppFooter from "./components/AppFooter";
+import AppTitle from "./components/AppTitle";
 function App() {
   return (
-    <Container>
+    
+    <Container sx={{ padding: 1, borderRadius: 1, color: 'white',backgroundColor: (theme) =>
+    theme.palette.mode === 'light'
+      ? theme.palette.grey[200]
+      : theme.palette.grey[800],}}>
+      
     <NavbarMUI/>
-       <Grid container spacing={5} marginTop={4}>
+    <AppTitle></AppTitle>
+    <Grid container spacing={4} marginTop={5}>
+        
           <AuthProvider>
             <BrowserRouter>
               <Routes>
@@ -33,7 +41,9 @@ function App() {
          
           </Grid>
           <AppFooter/>
+          
     </Container>   
+    
       );
 }
 

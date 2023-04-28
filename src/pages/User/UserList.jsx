@@ -9,6 +9,7 @@ import {
   ThemeProvider,
   Typography,
   TextField,
+  Divider,
 } from "@mui/material";
 
 import PhoneIcon from '@mui/icons-material/Phone';
@@ -73,21 +74,27 @@ const UserList = () => {
     };
   }, []);
 
-  const [text, setText] = useState("");
+  // const [text, setText] = useState("");
 
   return (
+
+
+
     <>
-      {loading ? (<h3>Loading..</h3>) : (
+      
+      {loading ? (<Typography color={"black"} marginLeft={65}>Loading Data ....</Typography>) : (
 
         <>
           {users.map((e) => (
 
+
+
             <Grid item xs={12} sm={6} md={4} lg={3}>
 
               <ThemeProvider theme={theme}>
-              
-                <Card elevation={4} className="paper" href={`/user/${e._id}`} >
-              
+
+                <Card elevation={8} className="paper" href={`/user/${e._id}`} >
+
                   <CardActionArea href={`/user/${e._id}`} >
                     <img src={e.brand} alt="" className="img" />
                     <Box sx={{ display: "flex", paddingX: 1 }}>
@@ -112,6 +119,8 @@ const UserList = () => {
                         {e.itemtype}
                       </Typography>
                     </Box>
+
+                    <Divider variant="middle" />
 
                     <Box sx={{ paddingX: 1, mt: 3 }}>
                       <Box

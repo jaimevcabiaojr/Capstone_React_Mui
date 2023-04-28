@@ -45,12 +45,12 @@ const AppBarDark = () => {
           >
             JVCabiao
           </Typography>
-          <Box sx={{ ml:2,display: { xs: "none", md: "flex" } }}>
+          <Box sx={{ ml:90,display: { xs: "none", md: "flex" } }}>
             <Button sx={{ color: "white" }} href="/">
               Home
             </Button>
             <Button sx={{ color: "white" }} href="/user/new">
-              Add List
+              New
             </Button>
             <Button sx={{ color: "white" }} href="/about">
               About
@@ -75,13 +75,13 @@ const AppBarDark = () => {
             onClose={handleCloseNavMenu}
             sx={{ display: { xs: "block", md: "none" } }}
           >
-            <MenuItem onClick={handleCloseNavMenu} textAlign="center">
+            <MenuItem onClick={handleCloseNavMenu} textAlign="center" href="/">
               Home
             </MenuItem>
-            <MenuItem onClick={handleCloseNavMenu} textAlign="center" href={"/user/new"}>
-              Add List
+            <MenuItem onClick={handleCloseNavMenu} textAlign="center" href="/user/new">
+              New
             </MenuItem>
-            <MenuItem onClick={handleCloseNavMenu} textAlign="center" >
+            <MenuItem onClick={handleCloseNavMenu} textAlign="center" href="/about">
               About
             </MenuItem>
           </Menu>
