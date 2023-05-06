@@ -30,7 +30,8 @@ const UserView = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    let url = `http://127.0.0.1:5000/api/users/${id}`;
+    let url = `https://capstone-mongo-ec71wp78a-jaimevcabiaojr.vercel.app/api/users/${id}`;
+    // let url = `http://127.0.0.1:5000/api/users/${id}`;
 
     const controller = new AbortController();
 
@@ -59,7 +60,7 @@ const UserView = () => {
 
   const handleDelete = (e) => {
     if (window.confirm("Are you really sure you want to delete this record?")) {
-      let url = `http://127.0.0.1:5000/api/users`;
+      let url = `https://capstone-mongo-ec71wp78a-jaimevcabiaojr.vercel.app/api/users`;
 
       const requestOptions = {
         method: "DELETE",

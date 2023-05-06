@@ -20,6 +20,7 @@ const UserCreate = () => {
     issue: "",
     remarks:"",
     status1:"Pending",
+    password: "password",
     id: 0,
   });
 
@@ -33,7 +34,8 @@ const UserCreate = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const controller = new AbortController();
-    let url = `http://127.0.0.1:5000/api/users`;
+    let url = `https://capstone-mongo-db.vercel.app/`;
+    // let url = `http://127.0.0.1:5000/api/users`;
     const requestOptions = {
       signal: controller.signal,
       method: "POST",
@@ -50,6 +52,7 @@ const UserCreate = () => {
         issue: user.issue,
         remarks: user.remarks,
         status1: user.status1,
+        password: user.password,
       }),
     };
     fetch(url, requestOptions)
