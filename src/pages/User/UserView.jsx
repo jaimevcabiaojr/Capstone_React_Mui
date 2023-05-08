@@ -60,7 +60,7 @@ const UserView = () => {
 
   const handleDelete = (e) => {
     if (window.confirm("Are you really sure you want to delete this record?")) {
-      let url = `https://capstone-mongo-ec71wp78a-jaimevcabiaojr.vercel.app/api/users`;
+      let url = `${process.env.REACT_APP_API_URL}/users`;
 
       const requestOptions = {
         method: "DELETE",

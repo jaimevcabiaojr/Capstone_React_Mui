@@ -50,7 +50,7 @@ const UserList = () => {
   useEffect(() => {
     const controller = new AbortController();
 
-    let url = "https://capstone-mongo-ec71wp78a-jaimevcabiaojr.vercel.app/api/users";
+    let url = `${process.env.REACT_APP_API_URL}/users`;
     // let url = "http://127.0.0.1:5000/api/users";
 
     const requestOptions = {

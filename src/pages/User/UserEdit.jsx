@@ -33,7 +33,7 @@ const UserEdit = () => {
   const { token } = useAuth();
 
   useEffect(() => {
-    let url = `https://capstone-mongo-ec71wp78a-jaimevcabiaojr.vercel.app/api/users/${id}`;
+    let url = `${process.env.REACT_APP_API_URL}/users/${id}`;
 
     const controller = new AbortController();
 
@@ -61,7 +61,7 @@ const UserEdit = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let url = `https://capstone-mongo-ec71wp78a-jaimevcabiaojr.vercel.app/api/users`;
+    let url = `${process.env.REACT_APP_API_URL}/users`;
 
     const requestOptions = {
       method: "PUT",

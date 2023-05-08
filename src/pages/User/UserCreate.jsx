@@ -34,7 +34,7 @@ const UserCreate = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const controller = new AbortController();
-    let url = `https://capstone-mongo-db.vercel.app/`;
+    let url = `${process.env.REACT_APP_API_URL}/users`;
     // let url = `http://127.0.0.1:5000/api/users`;
     const requestOptions = {
       signal: controller.signal,
